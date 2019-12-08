@@ -174,4 +174,56 @@ body {
             }
         }
     }
+
+    //третий вариант 
+    .text-hover-1__field-ex-3 {
+        position: relative;
+        box-sizing: content-box;
+        padding: 20px;
+        white-space: nowrap;
+
+        .text-hover-1__js {
+            position: absolute;
+            left:0;
+            top:0;
+            transition: all .2s linear;
+        }
+    }
+
+    .inner-js-span-changed {
+        display: inline-block;
+        transform: translateY(-30px);
+        animation: singleSymbolChange-forward .3s linear forwards;
+    }
+
+    @keyframes singleSymbolChange-forward {
+        0% {
+            transform:translateY(0) rotateY(0deg);
+        }
+        50% {
+            transform:translateY(-10px) rotateY(180deg);
+        }
+        100% {
+            color:darkblue;
+            transform:translateY(0) rotateY(360deg);
+        }
+    }
+
+    .inner-js-span-changed-back {
+        display: inline-block;
+        transform: translateY(-30px);
+        animation: singleSymbolChange-back .3s linear forwards;
+    }
+
+    @keyframes singleSymbolChange-back {
+        0% {
+            transform:translateY(0) rotateY(0deg);
+        }
+        50% {
+            transform:translateY(10px) rotateY(180deg);
+        }
+        100% {
+            transform:translateY(0) rotateY(360deg);
+        }
+    }
 }
